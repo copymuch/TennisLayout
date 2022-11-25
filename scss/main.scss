@@ -1,0 +1,143 @@
+@import "_base";
+@font-face {
+    font-family: "GilsonR";
+    src: url(../fonts/Gilroy-Regular.ttf);
+    font-weight: 400;
+}
+@font-face {
+    font-family: "GilsonM";
+    src: url(../fonts/Gilroy-Medium.ttf);
+    font-weight: 500;
+}
+@font-face {
+    font-family: "GilsonSB";
+    src: url(../fonts/Gilroy-Semibold.ttf);
+    font-weight: 600;
+}
+@font-face {
+    font-family: "GilsonB";
+    src: url(../fonts/Gilroy-Bold.ttf);
+    font-weight: 700;
+}
+h4 {
+    font-family: "GilsonSB";
+    font-size: 1.31rem;
+    margin: 0;
+    padding: 25px 0 0 0;
+}
+.header {
+    font-family: "GilsonM";
+    background: url(../img/headerBg.png);
+    @include bgProperty;
+}
+a {
+    color: #fff;
+}
+
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10px 0 10px;
+}
+.header__bar {  
+    display: flex;
+    gap: 10px 40px;
+    flex-wrap: wrap;
+    padding: 0 20px;
+}
+.header__social {
+    a:first-of-type {margin-right: 20px;}
+}
+.promo {
+    background: url(../img/headerBg.png);
+    @include bgProperty;
+    margin: 0;
+}
+.promo__text-content {
+    padding: 200px 0;
+}
+.promo__turntable {
+    display: flex;
+    gap: 30px;
+    padding-top: 60px;
+    p {
+        font-family: "GilsonSB";
+        font-size: 18px;
+    }
+}
+.playButton {
+    background-color: #8D86C9;
+    padding: 30px;
+    line-height: 0;
+    text-align: center;
+    border-radius: 50%;
+    width: 18px;
+}
+.little {
+    font-size: 1.1rem;
+    font-family: "GilsonSB";
+}
+
+.services__cards {
+    p {font-size: 1.5rem;font-family: "GilsonB";}
+    display: flex;
+    gap: 12px;
+}
+.services__card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #8D86C9;
+    padding: 0 35px;
+    width: 100%;
+}
+.coating__container {
+    display: flex;
+    img {max-width: 100%;-o-object-fit: contain;object-fit: contain;}
+    justify-content: space-between;
+    gap: 10px;
+}
+.coating__card {
+    position: relative;
+    text-align: center;
+    h3 {
+        position: absolute;
+        bottom: 40px;
+        width: 100%;
+    }
+}
+
+.info {
+    p,h2,h3{color: #333333;}
+}
+.info__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.info__img{
+    margin-right: -15%;
+    z-index: 1;
+    max-width: 100%;
+    img {
+        max-width: 87%;
+        -o-object-fit: contain;
+           object-fit: contain;
+    }
+}
+.info__text-content {
+    background: #F7ECE1;
+    padding: 70px 60px 84px 146px;
+    max-width: 25rem;
+    li {
+        font-size: 0.8rem;
+        padding-top: 25px;
+    }
+    li::before {
+        content: url(../img/icons/square.svg);
+        color: #8D86C9;
+        padding-right: 23px;
+    }
+}
+@import"_media";
