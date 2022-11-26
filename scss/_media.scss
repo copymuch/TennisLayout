@@ -11,9 +11,29 @@
 }
 @media (max-width: 992px){
     html{font-size: 90%;}
-}
-@media (max-width: 871px){
-
+    .trainers__list {
+        ul {
+            flex-wrap: wrap;
+        }
+        li {
+            max-width: 25%;
+            text-align: center;
+        }
+    }
+    .other__container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .price,.services {
+        width: 70%;
+    }
+    .services__img {
+        text-align: center;
+        padding: 0;
+    }
+    .services__text-content {
+        bottom: 30px;
+    }
 }
 @media (max-width: 780px){
     .services__card {
@@ -33,10 +53,25 @@
 }
 @media (max-width: 680px){
     html {font-size: 80%;}
+    .trainers__item_img {
+        padding: 0;
+    }
 }
 @media (max-width: 531px){
     html {font-size: 70%;}
     .header__bar {display: none;}
+    .trainers__list {
+        ul {
+            justify-content: center;
+        }
+        li {
+            max-width: 100%;
+        }
+    }
+    .trainers__item_text-content {
+        max-width: 80%;
+        margin: 0 auto;
+    }
    
 }
 @media (max-width: 379px){

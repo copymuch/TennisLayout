@@ -123,14 +123,14 @@ a {
   padding: 30px 10px 0 10px;
 }
 
-.header__bar {
+.header__bar, .footer__bar {
   display: flex;
   gap: 10px 40px;
   flex-wrap: wrap;
   padding: 0 20px;
 }
 
-.header__social a:first-of-type {
+.header__social a:first-of-type, .footer__social a:first-of-type {
   margin-right: 20px;
 }
 
@@ -246,6 +246,126 @@ a {
   padding-right: 23px;
 }
 
+.trainers p, .trainers h4, .trainers h2 {
+  color: #333333;
+}
+
+.trainers__title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.title__arrows {
+  display: flex;
+  align-items: center;
+  line-height: 0;
+  gap: 15px;
+}
+
+.arrow {
+  background: #8D86C9;
+  padding: 15px;
+}
+
+.other__container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.trainers__list {
+  margin-top: 75px;
+}
+.trainers__list ul {
+  display: flex;
+  justify-content: space-between;
+  max-width: 100%;
+  gap: 10px;
+}
+.trainers__list li {
+  max-width: 15.5%;
+}
+
+.trainers__item_img {
+  padding: 0 15px;
+}
+.trainers__item_img img {
+  max-width: 100%;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+
+.trainers__item_text-content {
+  text-align: center;
+}
+
+.price, .services {
+  margin: 0;
+  width: 45%;
+}
+.price h2, .services h2 {
+  color: #333333;
+}
+.price h4, .price h3, .services h4, .services h3 {
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+.price__bar {
+  gap: 20px;
+  margin-top: 75px;
+  max-width: 100%;
+}
+
+.price__item {
+  background: #8D86C9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px 12px 20px;
+  margin-top: 30px;
+}
+
+.services__title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.position-block {
+  position: relative;
+  margin-top: 75px;
+}
+
+.services__img {
+  padding: 30px 25px;
+}
+.services__img img {
+  max-width: 100%;
+}
+
+.services__text-content {
+  position: absolute;
+  bottom: 60px;
+  left: 65px;
+}
+
+footer {
+  background: #F7ECE1;
+  margin-top: 150px;
+}
+
+.footer__container {
+  display: flex;
+  padding: 38px 0;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer__container p, .footer__container a {
+  font-size: 14px;
+  color: #333333;
+}
+
 @media (max-width: 1040px) {
   .services__cards {
     flex-wrap: wrap;
@@ -260,6 +380,27 @@ a {
 @media (max-width: 992px) {
   html {
     font-size: 90%;
+  }
+  .trainers__list ul {
+    flex-wrap: wrap;
+  }
+  .trainers__list li {
+    max-width: 25%;
+    text-align: center;
+  }
+  .other__container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .price, .services {
+    width: 70%;
+  }
+  .services__img {
+    text-align: center;
+    padding: 0;
+  }
+  .services__text-content {
+    bottom: 30px;
   }
 }
 @media (max-width: 780px) {
@@ -281,6 +422,9 @@ a {
   html {
     font-size: 80%;
   }
+  .trainers__item_img {
+    padding: 0;
+  }
 }
 @media (max-width: 531px) {
   html {
@@ -288,5 +432,15 @@ a {
   }
   .header__bar {
     display: none;
+  }
+  .trainers__list ul {
+    justify-content: center;
+  }
+  .trainers__list li {
+    max-width: 100%;
+  }
+  .trainers__item_text-content {
+    max-width: 80%;
+    margin: 0 auto;
   }
 }
