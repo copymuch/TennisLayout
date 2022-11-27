@@ -130,8 +130,10 @@ a {
   padding: 0 20px;
 }
 
-.header__social a:first-of-type, .footer__social a:first-of-type {
-  margin-right: 20px;
+.header__social, .footer__social {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
 .promo {
@@ -418,6 +420,82 @@ footer {
     display: none;
   }
 }
+@media (max-width: 768px) {
+  .fixed-page {
+    overflow: hidden;
+  }
+  .burger {
+    display: flex;
+    position: relative;
+    width: 35px;
+    height: 25px;
+    z-index: 2;
+  }
+  .burger::after, .burger::before, .burger .burger-span {
+    content: "";
+    position: absolute;
+    background: #fff;
+    border-radius: 10px;
+    width: 100%;
+    height: 3px;
+    transition: 0.4s;
+  }
+  .burger.active::after, .burger.active::before, .burger .active span {
+    background: #333333;
+  }
+  .burger::after {
+    bottom: 0;
+  }
+  .burger::before {
+    top: 0;
+  }
+  .burger.active::after {
+    transform: rotate(48deg);
+    bottom: 10px;
+  }
+  .burger.active::before {
+    transform: rotate(-48deg);
+    top: 12px;
+  }
+  .burger.active span {
+    opacity: 0;
+  }
+  .burger-span {
+    top: 11px;
+  }
+  .active {
+    display: block;
+  }
+  .header__nav {
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+    top: 0;
+    left: -110%;
+    width: 100%;
+    height: 100%;
+    transition: 0.4s;
+    z-index: 1;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    background: #fff;
+    overflow: auto;
+  }
+  .header__nav li {
+    font-size: 3rem;
+    cursor: pointer;
+    width: 100%;
+  }
+  .header__nav li a {
+    color: #333333;
+  }
+  .header__nav.active {
+    left: 0;
+  }
+}
 @media (max-width: 680px) {
   html {
     font-size: 80%;
@@ -425,13 +503,24 @@ footer {
   .trainers__item_img {
     padding: 0;
   }
+  .footer__container {
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    gap: 20px;
+  }
+  .footer__nav ul {
+    max-width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  .footer__nav li {
+    width: 40%;
+  }
 }
 @media (max-width: 531px) {
   html {
     font-size: 70%;
-  }
-  .header__bar {
-    display: none;
   }
   .trainers__list ul {
     justify-content: center;
@@ -442,5 +531,8 @@ footer {
   .trainers__item_text-content {
     max-width: 80%;
     margin: 0 auto;
+  }
+  .info__text-content {
+    padding: 70px;
   }
 }

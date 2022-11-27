@@ -51,15 +51,36 @@
     }
    
 }
+
+//Бургер меню V.2
+@import "burger";
+//Бургер меню V.2
+
 @media (max-width: 680px){
     html {font-size: 80%;}
     .trainers__item_img {
         padding: 0;
     }
+    .footer__container {
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: center;
+        gap: 20px;
+    }
+    .footer__nav {
+        ul {
+            max-width: 100%;
+            align-items: center;
+            justify-content: center;
+        }
+        li {
+            width: 40%;
+
+        }
+    }
 }
 @media (max-width: 531px){
     html {font-size: 70%;}
-    .header__bar {display: none;}
     .trainers__list {
         ul {
             justify-content: center;
@@ -71,6 +92,9 @@
     .trainers__item_text-content {
         max-width: 80%;
         margin: 0 auto;
+    }
+    .info__text-content {
+        padding: 70px;
     }
    
 }

@@ -1,0 +1,81 @@
+@media (max-width: 768px){
+    .fixed-page {
+        overflow: hidden;
+    }
+    //Позиция блока и его размеры
+    .burger {
+        display: flex;
+        position: relative;
+        width: 35px;
+        height: 25px;
+        z-index: 2;
+        //Позиция внутренних элементов,их размеры и цвет
+        &::after,&::before,.burger-span{
+            content: '';
+            position: absolute;
+            background: #fff;
+            border-radius: 10px;
+            width: 100%;
+            height: 3px;
+            //Чтобы была обратная анимация
+            transition: 0.4s;
+        }
+        &.active::after,&.active::before,.active span{
+            background: #333333;
+        }
+
+        //Позиция каждого элемента отдельно
+        &::after {
+            bottom: 0;
+        }
+        &::before {
+            top: 0;
+        }
+        //Настройки анимации
+        &.active::after {
+            transform: rotate(48deg);
+            bottom: 10px;
+        }
+        &.active::before{
+            transform: rotate(-48deg);
+            top: 12px;
+        }
+        &.active span{
+            opacity: 0;
+        }
+    }
+    .burger-span {
+        top: 11px;
+    }
+    //Главный класс (JS)
+    .active {
+        display: block;
+    }
+    .header__nav {
+        display: flex;
+        position: fixed;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        box-sizing: border-box;
+        top: 0; 
+        left: -110%;
+        width: 100%;
+        height: 100%;
+        transition: 0.4s;
+        z-index: 1;
+        box-shadow: 10px 10px 10px rgba(0,0,0,.5);
+        padding: 15px;
+        background: #fff;
+        overflow: auto;
+        li {
+            font-size: 3rem;
+            cursor: pointer;
+            width: 100%;
+            a {color: #333333;}
+        }
+    }
+    .header__nav.active{
+        left: 0;
+    }
+}
